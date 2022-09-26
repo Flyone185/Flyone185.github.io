@@ -9,32 +9,55 @@
     <title>TP Bootstrap</title>
 </head>
 <body>
-  <header>
-    <nav class="navbar navbar-expand-md bg-dark">
-        <div class="container-fluid d-flex justify-content-xl-start justify-content-center">
-            <a class="nav-link" href="#"><img src="/Images/codoacodoLogo.png" width="140"></a>
-            <a class="nav-link text-light" style="font-size: 3vh;">Conf. Buenos Aires</a>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-md bg-dark navbar-light">
+      <div class="container-fluid d-flex justify-content-xl-start justify-content-md-center">
+        <a class="nav-link" href="#"><img src="/Images/codoacodoLogo.png" width="140"></a>
+        <a class="nav-link text-light" style="font-size: calc(2vh + 1vw);">Conf. Buenos Aires</a>
+        <div class="dropstart d-sm-flex d-md-none">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark text-center" style="font-size: calc(1vh + 0.5vw);">
+            <li class="nav-item">
+              <a class="dropdown-item" href="#la_conferencia">La conferencia</a>    
+            </li>
+            <li class="nav-item">
+              <a class="dropdown-item" href="#oradores">Oradores</a>
+            </li>
+            <li class="nav-item">
+              <a class="dropdown-item" href="#lugar_y_fecha">El lugar y la fecha</a>
+            </li>
+            <li class="nav-item">
+              <a class="dropdown-item" href="#conviertete_en_orador">Conviertete en Orador</a>
+            </li>
+            <li class="nav-item">
+              <a class="dropdown-item" href="#comprar_tickets">Comprar tickets</a>
+            </li>
+          </ul>                      
         </div>
-        <div class="container-fluid d-flex justify-content-xl-end justify-content-center">
-            <ul class="navbar-nav  justify-content-end  text-center" style="font-size: 2vh;">
-                <li class="nav-item ">
-                    <a class="nav-link text-light" href="#la_conferencia">La conferencia</a>    
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="#oradores">Oradores</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="#lugar_y_fecha">El lugar y la fecha</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="#conviertete_en_orador">Conviertete en Orador</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-success" href="#comprar_tickets">Comprar tickets</a>
-                </li>
-            </ul>
-        </div>
+      </div>
+      <div class="container-fluid d-flex justify-content-lg-center justify-content-center d-md-flex d-none">
+        <ul class="navbar-nav text-center" style="font-size: calc(1vh + 0.5vw);">
+          <li class="nav-item ">
+            <a class="nav-link text-light" href="#la_conferencia">La conferencia</a>    
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#oradores">Oradores</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#lugar_y_fecha">El lugar y la fecha</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#conviertete_en_orador">Conviertete en Orador</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-success" href="#comprar_tickets">Comprar tickets</a>
+          </li>
+        </ul>
+      </div>
     </nav>
+    
     </header>
     <section id="la_conferencia">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -56,24 +79,15 @@
             </div>
             <div class="container-fluid w-100 h-100 position-absolute top-0 start-0" style="background: rgb(0,0,0,0.6);">
               <div class="row h-75 align-items-center">
-              <div class="col-xl-6 offset-xl-6 col-12 offset-0 text-light" style="font-size: calc(1vh + 0.5vw)">
-                <h2>Conf BsAS</h2>
-                <p>Conf BsAs llega por primera vez a la Argentina. Un evento para conpartir con nuestra comunidad el conocimiento y la experiencia de los expertos que estan creando el futuro de la Internet. Van a conocer a miembros del evento, a otros estudiantes de Codo a Codo y a oradores de primer nivel que tenemos para ti. Te esperamos!</p>
-                <button type="button" class="btn btn-outline-light">Quiero ser orador</button>
-                <button type="button" class="btn btn-success">Comprar tickets</button>
+                <div class="col-xl-6 offset-xl-6 col-12 offset-0 text-light" style="font-size: calc(1vh + 0.5vw)">
+                  <h2>Conf BsAS</h2>
+                  <p>Conf BsAs llega por primera vez a la Argentina. Un evento para conpartir con nuestra comunidad el conocimiento y la experiencia de los expertos que estan creando el futuro de la Internet. Van a conocer a miembros del evento, a otros estudiantes de Codo a Codo y a oradores de primer nivel que tenemos para ti. Te esperamos!</p>
+                  <button type="button" class="btn btn-outline-light">Quiero ser orador</button>
+                  <button type="button" class="btn btn-success">Comprar tickets</button>
+                </div>
               </div>
             </div>
-              <!--Mascara que oscurece la imagen-->
-            </div>
-            <!--<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>-->
+
     </section>
     <section id="oradores">
       <div class="text-center pt-3">
@@ -153,7 +167,7 @@
     <footer>
       <nav class="navbar navbar-expand-md" style="background: linear-gradient(90deg, #001530,#003f5d);">
         <div class="container-fluid justify-content-center">
-            <ul class="navbar-nav text-center" style="font-size: 2vh;">
+            <ul class="navbar-nav text-center"  style="font-size: calc(1vh + 0.5vw);">
                 <li class="nav-item  mx-xl-4 mx-lg-3">
                     <a class="nav-link text-light" href="#la_conferencia">Preguntas frecuentes</a>    
                 </li>
