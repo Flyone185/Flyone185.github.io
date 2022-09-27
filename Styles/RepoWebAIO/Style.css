@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Handmade Signature' ;
+    src: url(../../Fonts/Handmade\ Signature.otf);
+    font-style: normal;
+    font-weight: 900;
+}
+
+.cabeceraTitulo{
+    font-family:'Handmade Signature';
+    font-size: 4vw;
+    text-align: center;
+}
+
+.buscador{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+form{
+    display: flex;
+    align-items: center;
+}
+
+.contenedorSecciones{
+    margin-left: 20%;
+    margin-right: 20%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap:1em;
+}
+.secciones{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:1em;
+}
+
+.card, .lateralTaskbar, .ultimoAcceso{
+    border-radius: 10px;
+    min-height: 200px;
+    max-height: 100%;
+    max-width: 1fr;
+    position: relative;
+    border: black solid 3px;
+}
+.ultimoAcceso{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
