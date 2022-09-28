@@ -18,16 +18,15 @@
     text-align: center;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr) 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas:    "titulo     titulo      titulo      search";
 }
 
 .tituloHeader{
     font-family:'Handmade Signature';
     font-size: calc(4vw + 2vh);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-self: center;
+    align-self: center;
     grid-area: titulo;
 }
 .searchHeader{
@@ -45,25 +44,27 @@ form{
     max-width: 1500px;
 
     margin:auto;
-    text-align: center;
+    text-align: stretch;
+    justify-items: stretch;
     border: red solid 3px;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr) 2fr;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    /*grid-template-columns: repeat(2, 1fr) 2fr;*/
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas:    "sec-1      sec-2       taskbar"
                             "sec-3      sec-4       taskbar"
                             "ult-sec    ult-sec     ult-sec";
-    grid-gap:1em;
+    grid-gap: .5em;
 }
 
 .card,.lateralTaskbar, .ultimoAcceso{
     display: block;
     padding: 5px;
 
-    min-height: 50px;
+    min-height: calc(30vw - 2em);
     max-height: 100%;
-    min-width: 50px;
+    min-width: calc(30vw - 2em);
     max-width: 100%;
 
     border-radius: 10px;
