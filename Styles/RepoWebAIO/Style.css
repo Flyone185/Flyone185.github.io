@@ -1,3 +1,8 @@
+*{
+    margin:0;
+    padding:0;
+}
+
 @font-face {
     font-family: 'Handmade Signature' ;
     src: url(../../Fonts/Handmade\ Signature.otf);
@@ -5,15 +10,28 @@
     font-weight: 900;
 }
 
-.cabeceraTitulo{
-    font-family:'Handmade Signature';
-    font-size: 4vw;
+.contenedorHeader{
+    width: 90vw;
+    max-width: 1500px;
+
+    margin:auto;
     text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 1fr;
+    grid-template-areas:    "titulo     titulo      titulo      search";
 }
 
-.buscador{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+.tituloHeader{
+    font-family:'Handmade Signature';
+    font-size: calc(4vw + 2vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: titulo;
+}
+.searchHeader{
+    grid-area: search;
 }
 
 form{
@@ -22,30 +40,53 @@ form{
 }
 
 .contenedorSecciones{
-    margin-left: 20%;
-    margin-right: 20%;
+    width: 90vw;
+    height: 90vw;
+    max-width: 1500px;
+
+    margin:auto;
+    text-align: center;
+    border: red solid 3px;
+
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) 2fr;
     grid-template-rows: repeat(3, 1fr);
-    gap:1em;
-}
-.secciones{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap:1em;
+    grid-template-areas:    "sec-1      sec-2       taskbar"
+                            "sec-3      sec-4       taskbar"
+                            "ult-sec    ult-sec     ult-sec";
+    grid-gap:1em;
 }
 
-.card, .lateralTaskbar, .ultimoAcceso{
-    border-radius: 10px;
-    min-height: 100px;
+.card,.lateralTaskbar, .ultimoAcceso{
+    display: block;
+    padding: 5px;
+
+    min-height: 50px;
     max-height: 100%;
-
-    min-width: 100px;
+    min-width: 50px;
     max-width: 100%;
-    position: relative;
-    border: black solid 3px;
+
+    border-radius: 10px;
+    background: #2f89fc;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
 }
+.card-1{
+    grid-area: sec-1;
+}
+.card-2{
+    grid-area: sec-2;
+}
+.card-3{
+    grid-area: sec-3;
+}
+.card-4{
+    grid-area: sec-4;
+}
+
+.lateralTaskbar{
+    grid-area: taskbar;
+}
+
 .ultimoAcceso{
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-area: ult-sec;
 }
