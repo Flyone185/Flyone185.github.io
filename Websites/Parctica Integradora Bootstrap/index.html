@@ -221,27 +221,28 @@
     }
 
     #preloaderText{
-      color: transparent;
-      background-image:linear-gradient(to left, #FFD700, #7B68EE, #3498db, #2ecc71, #FFD700); ;
-      background-clip: text;
-      background-size: 1000%;
-      -webkit-animation: color 1s linear infinite;
-      -moz-animation: color 1s linear infinite;
-      -o-animation: color 1s linear infinite;
-      animation: color 1s linear infinite;
-      font-size:calc(12vh + 4vw);
-      font-family: 'Handmade Signature';
-      justify-self: center;
-      align-self:start;
-    }
-    @keyframes color {
-    from {
-        background-position: 0% 50%;
+      display: table;
+      margin:auto;
+      position:relative;
+      color: rgb(255,255,0);
+      font-size:calc(6vh + 2vw);
+      font-family: 'monospace';
     }
 
-    to {
-        background-position: 100% 50%;
+    #preloaderText span{
+      position:absolute;
+      right:0;
+      width:0;
+      background: #000;
+      border-left: 1px solid #FFF;
+      animation: escribir 2s steps(11) infinite alternate;
+      -webkit-animation: escribir 2s steps(11) infinite alternate;
+      -o-animation: escribir 2s steps(11) infinite alternate;
+      -moz-animation: escribir 2s steps(11) infinite alternate;
     }
+    @keyframes escribir {
+      from { width: 100% }
+    to { width:0 }
 
   }
   #footerPreloader{
@@ -258,24 +259,24 @@
 
   <div id="preloader">
     <img id="preloaderImg" src="/pacman_loader.svg">
-    <p id="preloaderText">Loading...</p>
+    <p id="preloaderText">Loading....<span>&#160;</span></p>
     <div id="footerPreloader">
       <p>© 2022 Diseñado con cariño por Moreno, Uriel ;) </p>
     </div>
   </div>  
   
-  <script>
-    
+  <script>   
     var loader = document.getElementById("preloader");
     var page = document.getElementById("page")
     
-    window.addEventListener(
-      "load",window.setTimeout(
-        function(){
-          loader.style.display = "none";
-          page.style.display = "initial";
-        },5000)); 
+    window.addEventListener("load", function(){
+      loader.style.display = "none";
+      page.style.display = "initial";
+      
+    })
+  </script>
 
+  <script>
 
   </script>
 
