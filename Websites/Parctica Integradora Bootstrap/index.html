@@ -225,6 +225,9 @@
       background-image:linear-gradient(to left, #FFD700, #7B68EE, #3498db, #2ecc71, #FFD700); ;
       background-clip: text;
       background-size: 1000%;
+      -webkit-animation: color 1s linear infinite;
+      -moz-animation: color 1s linear infinite;
+      -o-animation: color 1s linear infinite;
       animation: color 1s linear infinite;
       font-size:calc(12vh + 4vw);
       font-family: 'Handmade Signature';
@@ -265,11 +268,13 @@
     
     var loader = document.getElementById("preloader");
     var page = document.getElementById("page")
-    window.addEventListener("load", function(){
-      loader.style.display = "none";
-      page.style.display = "initial";
-      
-    })
+    
+    window.addEventListener(
+      "load",window.setTimeout(
+        function(){
+          loader.style.display = "none";
+          page.style.display = "initial";
+        },5000)); 
 
 
   </script>
