@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Styles/RepoWebAIO/Style.css">
+    <script src="https://kit.fontawesome.com/bfffee98c7.js" crossorigin="anonymous"></script>
     <title>Repo web All In One</title>
 </head>
 <body>
@@ -27,17 +28,31 @@
     <section>
         <!-- PROYECTOS - LINKS USTILES - TUTORIALES Y CURSOS - CHEATSHEETS - LATERAL TASKBAR - BARRA INFERIOR  -->
         <div class="contenedorSecciones">
-            <div class="card card-1"><a href="/Websites/Parctica Integradora Bootstrap/index.html"> Bootstrap Integrador</a></div>
-            <div class="card card-2"></div>
-            <div class="card card-3"></div>
-            <div class="card card-4"></div>
-            <div class="lateralTaskbar"></div>
-            <div class="ultimoAcceso"></div>
+            <div class="card card-1"><a href="/Websites/Parctica Integradora Bootstrap/index.html"><i class="fa-solid fa-code"></i></a></div>
+            <div class="card card-2"><i data-modal-target="#modal" class="fa-regular fa-lightbulb"></i></div>
+            <div class="card card-3"><i data-modal-target="#modal" class="fa-regular fa-folder"></i></div>
+            <div class="card card-4"><i data-modal-target="#modal" class="fa-regular fa-star"></i></div>
+            <div class="card lateralTaskbar"><i data-modal-target="#modal" class="fa-solid fa-list-check"></i></div>
+            <div class="card ultimoAcceso"><i data-modal-target="#modal" class="fa-solid fa-clock-rotate-left"></i></div>
         </div>
+
+        <div class="modal" id="modal">
+            <header class="modalHeader">
+                <div class="modalTitle">
+                    Trabajos Realizados
+                </div>
+                <button data-close-button class="modalClose"><i class="fa-solid fa-circle-xmark"></i></button>
+            </header>
+            <section class="modalBody">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure voluptatum aliquam accusantium modi officiis quisquam reprehenderit provident nostrum, consequatur id a debitis porro numquam quae praesentium ut assumenda non quod esse, ducimus, optio iusto dolorum! Optio hic autem fugit assumenda error deserunt dignissimos enim quia dolore animi iure vel, quae nemo ea quidem pariatur, temporibus expedita! Obcaecati similique laboriosam possimus nihil, dolore, maxime, corrupti laborum inventore dolor pariatur ea hic totam. Praesentium modi labore minus eaque. Sunt dolores reiciendis alias!
+            </section>
+        </div>
+        <div id="overlay"></div>
         
     </section>
     <footer>
         <!-- IMAGINO QUE ALUNOS DATOS BREVES MIOS COMO PARA PONER ALGO  -->
     </footer>
 </body>
+<script src="/Js/script.js"></script>
 </html>

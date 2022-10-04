@@ -1,6 +1,8 @@
-*{
+/*REGLAS GENERALES*/
+*, *::after, *::before{
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 @font-face {
@@ -9,8 +11,13 @@
     font-style: normal;
     font-weight: 900;
 }
+
+body{
+    background-image: linear-gradient(to right, #E62728, #FA5A1A,#FBA245,#E29581,#A44043,#A81A2F);
+}
+
 /*DISPOSITIVO MUY PEQUEÑO*/
-@media(max-width:375px){
+@media(max-width:376px){
     body>section, body>header, body>footer{
         display: none;
     }
@@ -21,17 +28,115 @@
     }    
 }
 
-/*CELULARES*/
-@media(min-width:375px) and (max-width:1200px){
-    body{
-        background: #FF0;
+/*CELULARES Y TABLETS*/
+@media all and (min-width:376px) and (max-width:1024px){
+    .contenedorHeader{
+        width: 90vw;
+        max-width: 920px;
+
+        margin:auto;
+        text-align: center;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:    "titulo     titulo      titulo      search";
+    }
+
+    .tituloHeader{
+        font-family:'Handmade Signature';
+        font-size: calc(4vw + 2vh);
+        justify-self: center;
+        align-self: center;
+        grid-area: titulo;
+        margin-top:.5em;
+    }
+    .searchHeader{
+        grid-area: search;
+    }
+
+    form{
+        display: flex;
+        align-items: center;
+    }
+
+    .contenedorSecciones{
+        width: 90vw;
+        height: 90vw;
+        
+
+        margin:auto;
+        text-align: stretch;
+        justify-items: stretch;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 1fr);
+        /*grid-template-columns: repeat(2, 1fr) 2fr;*/
+        /*grid-template-rows: repeat(8, 1fr);*/
+        grid-template-areas:    "sec-1      sec-2"
+                                "sec-3      sec-4"
+                                "taskbar    taskbar"
+                                "ult-sec    ult-sec";
+        grid-gap: .5em;
+    }
+
+    .card,.lateralTaskbar, .ultimoAcceso{
+        display: block;
+        padding: 5px;
+
+        min-height: calc(30vw - 2em);
+        max-height: 100%;
+        min-width: calc(30vw - 2em);
+        max-width: 100%;
+
+        border-radius: 10px;
+        background: rgba(255, 255, 255, .4);
+	    -webkit-backdrop-filter: blur(10px);
+	    backdrop-filter: blur(10px);
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    }
+
+    .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-1{
+        grid-area: sec-1;
+        
+    }
+    .card-2{
+        grid-area: sec-2;
+    }
+    .card-3{
+        grid-area: sec-3;
+    }
+    .card-4{
+        grid-area: sec-4;
+    }
+
+    .lateralTaskbar{
+        grid-area: taskbar;
+    }
+
+    .ultimoAcceso{
+        grid-area: ult-sec;
+    }
+    .card i{
+        font-size: calc(4vw + 2vh);
+        color: aliceblue;
+        text-decoration: none;
+        transition: .5s;
+    }
+    .card i:hover{
+        font-size: calc(4vw + 3vh);
+        transition: .5s;
+    }
+    .modal{
+        display: none;
     }
 }
-
-@media(min-width: 1200px){
-    body{
-        background-image: linear-gradient(to right, #E62728, #FA5A1A,#FBA245,#E29581,#A44043,#A81A2F);
-        }
+/*Computadoras*/
+@media all and (min-width: 1024px){
     .contenedorHeader{
         width: 90vw;
         max-width: 1500px;
@@ -89,13 +194,19 @@
         max-width: 100%;
 
         border-radius: 10px;
-        background: rgba(255, 255, 255, .5);
+        background: rgba(255, 255, 255, .4);
 	    -webkit-backdrop-filter: blur(10px);
 	    backdrop-filter: blur(10px);
         box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
     }
+    .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .card-1{
         grid-area: sec-1;
+        
     }
     .card-2{
         grid-area: sec-2;
@@ -113,5 +224,92 @@
 
     .ultimoAcceso{
         grid-area: ult-sec;
+    }
+    .card i{
+        font-size: calc(6vw + 4vh);
+        color: aliceblue;
+        text-decoration: none;
+        transition: .5s;
+    }
+    .card i:hover{
+        font-size: calc(6vw + 6vh);
+        transition: .5s;
+    }
+
+    /*ESTILOS MODAL POP-UP*/
+    .modal{
+        position: fixed;
+        display: grid;
+        grid-template-rows: 1fr 3fr;
+
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%) scale(0);
+        transition: 0.2s ease-in-out;
+
+        width: 50%;
+
+        border-radius: 10px;
+        background: rgba(255, 255, 255, .4);
+	    -webkit-backdrop-filter: blur(10px);
+	    backdrop-filter: blur(10px);
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+        
+        z-index: 10;
+    }
+
+    .modal.active{
+        transform: translate(-50%,-50%) scale(1);
+    }
+
+    .modalHeader{
+        padding: 10px 20px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(0,0,0,0.6);
+    }
+
+    .modalHeader .modalTitle{
+        font-family: 'Handmade Signature';
+        font-size: calc(calc(2vw + 1vh));
+    }
+
+    .modalHeader .modalClose{
+        cursor:pointer;
+        border: none;
+        outline: none;
+        background: none;
+
+        font-size: calc(1vw + 2vh);
+        transition: 0.2s;
+        color: #000;
+    }
+
+    .modalHeader .modalClose:hover{
+        font-size: calc(1.2vw + 2vh);
+        transition: 0.2s;
+    }
+
+    .modalBody{
+        padding: 10px 20px;
+    }
+
+    #overlay{
+        position: fixed;
+        opacity: 0;
+        pointer-events: none;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        background: rgba(0,0,0,0.2);
+        transition: 0.2s ease-in-out;
+    }
+
+    #overlay.active{
+        opacity: 1;
+        pointer-events: all;
     }
 }
