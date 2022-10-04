@@ -9,85 +9,109 @@
     font-style: normal;
     font-weight: 900;
 }
-
-.contenedorHeader{
-    width: 90vw;
-    max-width: 1500px;
-
-    margin:auto;
-    text-align: center;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:    "titulo     titulo      titulo      search";
+/*DISPOSITIVO MUY PEQUEÑO*/
+@media(max-width:375px){
+    body>section, body>header, body>footer{
+        display: none;
+    }
+    body{
+        width: 100vw;
+        height: 100vh;
+        background: url("/Images/Alert.gif") no-repeat center center ;
+    }    
 }
 
-.tituloHeader{
-    font-family:'Handmade Signature';
-    font-size: calc(4vw + 2vh);
-    justify-self: center;
-    align-self: center;
-    grid-area: titulo;
-}
-.searchHeader{
-    grid-area: search;
+/*CELULARES*/
+@media(min-width:375px) and (max-width:1200px){
+    body{
+        background: #FF0;
+    }
 }
 
-form{
-    display: flex;
-    align-items: center;
-}
+@media(min-width: 1200px){
+    body{
+        background-image: linear-gradient(to right, #E62728, #FA5A1A,#FBA245,#E29581,#A44043,#A81A2F);
+        }
+    .contenedorHeader{
+        width: 90vw;
+        max-width: 1500px;
 
-.contenedorSecciones{
-    width: 90vw;
-    height: 90vw;
-    max-width: 1500px;
+        margin:auto;
+        text-align: center;
 
-    margin:auto;
-    text-align: stretch;
-    justify-items: stretch;
-    border: red solid 3px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:    "titulo     titulo      titulo      search";
+    }
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 1fr);
-    /*grid-template-columns: repeat(2, 1fr) 2fr;*/
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:    "sec-1      sec-2       taskbar"
-                            "sec-3      sec-4       taskbar"
-                            "ult-sec    ult-sec     ult-sec";
-    grid-gap: .5em;
-}
+    .tituloHeader{
+        font-family:'Handmade Signature';
+        font-size: calc(4vw + 2vh);
+        justify-self: center;
+        align-self: center;
+        grid-area: titulo;
+    }
+    .searchHeader{
+        grid-area: search;
+    }
 
-.card,.lateralTaskbar, .ultimoAcceso{
-    display: block;
-    padding: 5px;
+    form{
+        display: flex;
+        align-items: center;
+    }
 
-    min-height: calc(30vw - 2em);
-    max-height: 100%;
-    min-width: calc(30vw - 2em);
-    max-width: 100%;
+    .contenedorSecciones{
+        width: 90vw;
+        height: 40vw;
+        
 
-    border-radius: 10px;
-    background: #2f89fc;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-}
-.card-1{
-    grid-area: sec-1;
-}
-.card-2{
-    grid-area: sec-2;
-}
-.card-3{
-    grid-area: sec-3;
-}
-.card-4{
-    grid-area: sec-4;
-}
+        margin:auto;
+        text-align: stretch;
+        justify-items: stretch;
 
-.lateralTaskbar{
-    grid-area: taskbar;
-}
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 1fr);
+        /*grid-template-columns: repeat(2, 1fr) 2fr;*/
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:    "sec-1      sec-2       taskbar"
+                                "sec-3      sec-4       taskbar"
+                                "ult-sec    ult-sec     ult-sec";
+        grid-gap: .5em;
+    }
 
-.ultimoAcceso{
-    grid-area: ult-sec;
+    .card,.lateralTaskbar, .ultimoAcceso{
+        display: block;
+        padding: 5px;
+
+        min-height: calc(10vw - 2em);
+        max-height: 100%;
+        min-width: calc(30vw - 2em);
+        max-width: 100%;
+
+        border-radius: 10px;
+        background: rgba(255, 255, 255, .5);
+	    -webkit-backdrop-filter: blur(10px);
+	    backdrop-filter: blur(10px);
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    }
+    .card-1{
+        grid-area: sec-1;
+    }
+    .card-2{
+        grid-area: sec-2;
+    }
+    .card-3{
+        grid-area: sec-3;
+    }
+    .card-4{
+        grid-area: sec-4;
+    }
+
+    .lateralTaskbar{
+        grid-area: taskbar;
+    }
+
+    .ultimoAcceso{
+        grid-area: ult-sec;
+    }
 }
