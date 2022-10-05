@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body{
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    min-height: 100vh;
+    background: #2b343b !important;
+
+}
+
+.MenuLateral{
+    justify-content:left;
+    position: relative;
+    height: 100%;
+    width: 70px;
+    background: #212121;
+    box-shadow: 10px 0 0 #fdefde;
+    border-left: 10px solid #212121;
+    overflow-x: hidden;
+    transition: width 0.5s;   
+}
+@media(min-width:1000px){ /*Cuando el tamaño de la pantalla es menor a 1100px, el hover no se realiza haciendo que todo el contenido se desplaze mas de lo necesario*/
+.MenuLateral:hover{
+    width: 300px;
+}
+}
+
+.MenuLateral ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 40px;
+    align-items: center;
+}
+
+.MenuLateral ul li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.MenuLateral ul li.Active{
+    background: #fdefde;   
+}
+
+.MenuLateral ul li.Active a{
+    color: #000;
+    width: 100%;
+}
+
+.MenuLateral ul li.Active a::before{
+    content: '';
+    position: absolute;
+    top:-30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow:  15px 15px 0 #fdefde;
+}
+
+.MenuLateral ul li.Active a::after{
+    content: '';
+    position: absolute;
+    bottom:-30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow:  15px -15px 0 #fdefde; 
+
+}
+
+.MenuLateral ul li a{
+position: relative;
+display: block;
+width: 100%;
+display: flex;
+text-decoration: none;
+color: #fdefde;
+}
+
+.MenuLateral ul li a .MenuLateralIcono{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}   
+
+.MenuLateral ul li a .MenuLateralIcono ion-icon{
+    position: relative;
+    font-size: 1.5em;
+    z-index: 1;
+}
+
+.MenuLateral ul li a .MenuLateralTitulo{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
