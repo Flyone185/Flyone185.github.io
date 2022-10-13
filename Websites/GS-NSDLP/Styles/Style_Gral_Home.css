@@ -1,0 +1,138 @@
+    /*ESTILOS GENERALES HOME*/
+    body {
+        background: #2b343b !important;
+        font-family: "Roboto", sans-serif;
+        margin:30px;
+    }
+
+    /*MENU SUPERIOR*/
+    .MenuSuperiorHome{
+      display:block;
+    }
+    #navbarTitulo{
+        flex-grow: 1;
+    }
+    nav{
+        width: 90%; 
+        background: #fdefde;
+        padding:20px 0 20px 20px;
+        position: fixed;
+        z-index: 10;
+        top:0;
+        left:5%;
+        box-shadow:0px 4px 3px rgba(0,0,0,.5);
+
+        --heigth-navbar-home:100%;
+    }
+    nav ul{
+        display:flex;
+        list-style: none;
+        justify-content:flex-end;
+        flex-wrap: wrap;
+        font-size: xx-large;
+        height: 100%;
+        margin: 0;
+        font-family: 'Bebas Neue', cursive!important;
+        padding: 0;
+        z-index: 11;
+    }
+    nav ul li{
+        margin-right: 20px;        
+    }
+    nav ul li a{
+        color:#212121;
+        text-decoration: none;
+    }
+    nav ul li.SeccionActiva{
+        text-decoration: underline;  
+    }
+
+    /*CARRUSEL IMAGENES GRUPO*/
+    #Grupo{
+        padding-top:6em;
+    }
+    header{
+        display: flex;
+        justify-content: center;
+    }
+    header img{
+        width: 75vw;
+        border-radius: 2em;
+    }
+    #carouselExampleCaptions{
+        width: 75vw;
+
+    }
+    @media (max-width:800px) {
+        nav ul{
+            flex-direction: column;
+            font-size: 4vw;
+            text-align: center;
+        }
+        header img{
+            width: 75vw !important;
+            border-radius: 1em !important;
+        }
+        #carouselExampleCaptions{
+        width: 75vw!important;
+        border-radius: 1em !important;
+    }
+    }
+    /*TIME LINE GRUPO*/
+    #TimeLineGrupo{
+        display: block;
+        padding-top: 6em;
+    }
+
+    /*CARDS FORMULARIOS*/
+    #Formularios{
+        padding-top:6em;
+    }
+    .contenedorFormularios{
+        width: 60vw;
+        height: 20vw;
+
+        margin:auto;
+        text-align: stretch;
+        justify-items: stretch;
+
+        display: grid;
+        grid-template-areas:    "card-1     card-2      card-3"
+                                "card-4     card-5      card-6";
+        grid-gap: .5em;
+    }
+    .tarjetaFormulario{
+        display:grid;
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas:    "nombreForm"
+                                "iconForm";
+        justify-content: center;
+        align-items: center;
+
+        padding: 5px;
+
+        font-family: "Roboto";
+        text-align: center;
+
+        min-width: calc(20vw - 2em);
+        max-width: 100%;
+        min-height: calc(10vw - 2em);
+        max-height: 100%;
+        
+
+        border-radius: 10px;
+        background: rgba(255, 255, 255, .4);
+	    -webkit-backdrop-filter: blur(10px);
+	    backdrop-filter: blur(10px);
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    }
+    .tarjetaFormulario a{
+        color: #fdefde;
+        text-decoration: none;
+        grid-area: nombreForm;
+    }
+    .tarjetaFormulario i{
+        color: #ff6961;
+        scale: 5;
+        grid-area: iconForm;
+    }

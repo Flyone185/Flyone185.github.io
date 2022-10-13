@@ -1,0 +1,184 @@
+      /*===== Vertical Timeline =====*/
+      #TimeLine {
+        position: relative;
+        max-width: 920px;
+        width: 100%;
+        margin:auto;
+      }
+      #TimeLine .TimeLineStart,
+      #TimeLine .TimeLineEnd {
+        display: table;
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        font-weight: 100;
+        text-transform: uppercase;
+        background: #fdefde;
+        padding: 15px 23px;
+        color: #212121;
+        max-width: 5%;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+      }
+      #TimeLine .CenterLine {
+        position:absolute;
+        width: 3px;
+        height: 100%;
+        top:0;
+        left: 50%;
+        background: #fdefde;
+        z-index: -1;
+      }
+      #TimeLine .TimeLine-content {
+        padding-top: 3em;
+        padding-bottom: 3em;
+      }
+      .TimeLineArticle {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow:hidden;
+        margin: 3em 0;
+      }
+      .TimeLineArticle .LeftContainer,
+      .TimeLineArticle .RightContainer {
+        max-width: 45%;
+        width: 100%;
+      }
+      .TimeLineArticle .TimeLineAuthor {
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #eee;
+        text-align: right;
+      }
+      .TimeLineArticle .LeftContent,
+      .TimeLineArticle .RightContent {
+        position: relative;
+        width: auto;
+        background-color: #fdefde;
+        padding: 2em;
+      }
+      .TimeLineArticle p {
+        margin: 0 0 0 4em;
+        padding: 0;
+        font-weight: 400;
+        color: #212121;
+        font-size: 14px;
+        line-height: 24px;
+        position: relative;
+      }
+      .TimeLineArticle span.article-number {/**/
+        position: absolute;
+        display:flex;
+        align-items: stretch;
+        font-weight: 300;
+        font-size: 48px;
+        top: .5em;
+        left:.5em;
+        color: #212121;
+      }
+      .TimeLineArticle .LeftContainer {
+        float: left;
+      }
+      .TimeLineArticle .RightContainer {
+        float: right;
+      }
+      .TimeLineArticle .LeftContent:before,
+      .TimeLineArticle .RightContent:before{
+        position: absolute;
+        top: 20px;
+        font-size: 30px;
+        font-family: "FontAwesome";
+        color: #fdefde;
+      }
+      .TimeLineArticle .LeftContent:before {
+        content: "\f0da";
+        right: -8px;
+      }
+      .TimeLineArticle .RightContent:before {
+        content: "\f0d9";
+        left: -8px;
+      }
+      .TimeLineArticle .Ramas {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 64px;
+        height: 64px;
+        margin-left: -32px;
+        border-radius: 10%;
+      }
+      .TimeLineArticle .Ramas img{
+        width: 100%;
+        height: 100%;
+      }
+      #Manada{
+        background: #fdfd96;
+      }
+      #Scouts{
+        background: #77dd77;
+      }
+      #Caminantes{
+        background: #84b6f4;
+      }
+      #Rovers{
+        background: #ff6961;
+      }
+    /*===== // Vertical Timeline =====*/
+
+    /*===== Resonsive Vertical Timeline =====*/
+      @media only screen and (max-width: 800px) {
+        #TimeLine .TimeLineStart,
+        #TimeLine .TimeLineEnd {
+          margin: 0;
+        }
+        #TimeLine .CenterLine {
+          margin-left: 0;
+          left: 50px;
+        }
+        .TimeLineArticle .Ramas {
+          margin-left: 0;
+          left: 20px;
+        }
+        .TimeLineArticle .LeftContainer,
+        .TimeLineArticle .RightContainer {
+          max-width: 100%;
+          width: auto;
+          float: none;
+          margin-left: 110px;
+          min-height: 53px;
+        }
+        .TimeLineArticle .LeftContainer {
+          margin-bottom: 20px;
+        }
+        .TimeLineArticle .LeftContent,
+        .TimeLineArticle .RightContent {
+          padding: 10px 25px;
+          min-height: 65px;
+        }
+        .TimeLineArticle .LeftContent:before {
+          content: "\f0d9";
+          right: auto;
+          left: -8px;
+        }
+        .TimeLineArticle .RightContent:before {
+          display: none;
+        }
+        .TimeLineArticle span.article-number {
+          top: .1em;
+          
+        }
+
+      }
+      @media only screen and (max-width: 400px) {
+        .TimeLineArticle p {
+          margin: 0;
+        }
+        .TimeLineArticle span.article-number {
+          display: none;
+        }
+        
+      }
+    /*===== // Resonsive Vertical Timeline =====*/

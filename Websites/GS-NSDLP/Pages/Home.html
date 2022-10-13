@@ -4,314 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Fonts -->
+    <title>TimeLine</title>
+
+    <!--ESTILOS PERSONALES-->
+    <link rel="stylesheet" href="../Styles/Style_Gral_Home.css">
+    <link rel="stylesheet" href="../Styles/Vertical_TimeLine_Home.css">
+    
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <!-- FUENTES -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,400italic,700,900' rel='stylesheet' type='text/css'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <!-- // Fonts -->
-    <title>TimeLine</title>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-      body {
-        background: #2b343b;
-        font-family: "Roboto", sans-serif;
-      }
-
-      /*===== Vertical Timeline =====*/
-      #TimeLine {
-        position: relative;
-        max-width: 920px;
-        width: 100%;
-        margin: 0 auto;
-      }
-      #TimeLine .TimeLineStart,
-      #TimeLine .TimeLineEnd {
-        display: table;
-        font-family: "Roboto", sans-serif;
-        font-size: 18px;
-        font-weight: 100;
-        text-transform: uppercase;
-        background: #fdefde;
-        padding: 15px 23px;
-        color: #212121;
-        max-width: 5%;
-        width: 100%;
-        text-align: center;
-        margin: 0 auto;
-      }
-      #TimeLine .CenterLine {
-        position:absolute;
-        width: 3px;
-        height: 100%;
-        top:0;
-        left: 50%;
-        background: #fdefde;
-        z-index: -1;
-      }
-      #TimeLine .TimeLine-content {
-        padding-top: 3em;
-        padding-bottom: 3em;
-      }
-      .TimeLineArticle {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        overflow:hidden;
-        margin: 3em 0;
-      }
-      .TimeLineArticle .LeftContainer,
-      .TimeLineArticle .RightContainer {
-        max-width: 45%;
-        width: 100%;
-      }
-      .TimeLineArticle .TimeLineAuthor {
-        display: block;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 24px;
-        color: #eee;
-        text-align: right;
-      }
-      .TimeLineArticle .LeftContent,
-      .TimeLineArticle .RightContent {
-        position: relative;
-        width: auto;
-        background-color: #fdefde;
-        padding: 2em;
-      }
-      .TimeLineArticle p {
-        margin: 0 0 0 4em;
-        padding: 0;
-        font-weight: 400;
-        color: #212121;
-        font-size: 14px;
-        line-height: 24px;
-        position: relative;
-      }
-      .TimeLineArticle span.article-number {/**/
-        position: absolute;
-        display:flex;
-        align-items: stretch;
-        font-weight: 300;
-        font-size: 48px;
-        top: .5em;
-        left:.5em;
-        color: #212121;
-      }
-      .TimeLineArticle .LeftContainer {
-        float: left;
-      }
-      .TimeLineArticle .RightContainer {
-        float: right;
-      }
-      .TimeLineArticle .LeftContent:before,
-      .TimeLineArticle .RightContent:before{
-        position: absolute;
-        top: 20px;
-        font-size: 30px;
-        font-family: "FontAwesome";
-        color: #fdefde;
-      }
-      .TimeLineArticle .LeftContent:before {
-        content: "\f0da";
-        right: -8px;
-      }
-      .TimeLineArticle .RightContent:before {
-        content: "\f0d9";
-        left: -8px;
-      }
-      .TimeLineArticle .Ramas {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        width: 64px;
-        height: 64px;
-        margin-left: -32px;
-        border-radius: 10%;
-      }
-      .TimeLineArticle .Ramas img{
-        width: 100%;
-        height: 100%;
-      }
-      #Manada{
-        background: #fdfd96;
-      }
-      #Scouts{
-        background: #77dd77;
-      }
-      #Caminantes{
-        background: #84b6f4;
-      }
-      #Rovers{
-        background: #ff6961;
-      }
-    /*===== // Vertical Timeline =====*/
-
-    /*===== Resonsive Vertical Timeline =====*/
-      @media only screen and (max-width: 800px) {
-        #TimeLine .TimeLineStart,
-        #TimeLine .TimeLineEnd {
-          margin: 0;
-        }
-        #TimeLine .CenterLine {
-          margin-left: 0;
-          left: 50px;
-        }
-        .TimeLineArticle .Ramas {
-          margin-left: 0;
-          left: 20px;
-        }
-        .TimeLineArticle .LeftContainer,
-        .TimeLineArticle .RightContainer {
-          max-width: 100%;
-          width: auto;
-          float: none;
-          margin-left: 110px;
-          min-height: 53px;
-        }
-        .TimeLineArticle .LeftContainer {
-          margin-bottom: 20px;
-        }
-        .TimeLineArticle .LeftContent,
-        .TimeLineArticle .RightContent {
-          padding: 10px 25px;
-          min-height: 65px;
-        }
-        .TimeLineArticle .LeftContent:before {
-          content: "\f0d9";
-          right: auto;
-          left: -8px;
-        }
-        .TimeLineArticle .RightContent:before {
-          display: none;
-        }
-        .TimeLineArticle span.article-number {
-          top: .1em;
-          
-        }
-
-      }
-      @media only screen and (max-width: 400px) {
-        .TimeLineArticle p {
-          margin: 0;
-        }
-        .TimeLineArticle span.article-number {
-          display: none;
-        }
-        
-      }
-    /*===== // Resonsive Vertical Timeline =====*/
-    
-    /*home*/
-        body{
-            margin:30px;
-        }
-        .MenuSuperiorHome{
-          display:block;
-          margin-bottom:100px;
-        }
-        nav{
-            width: 90%; 
-            background: #fdefde;
-            padding:20px 0 20px 20px;
-            position: fixed;
-            z-index: 10;
-            top:0;
-            left:5%;
-            box-shadow:0px 4px 3px rgba(0,0,0,.5);
-
-            --heigth-navbar-home:100%;
-        }
-        nav ul{
-            display:flex;
-            list-style: none;
-            justify-content:flex-end;
-            flex-wrap: wrap;
-            font-size: xx-large;
-            height: 100%;
-            margin: 0;
-            font-family: 'Bebas Neue', cursive!important;
-            padding: 0;
-            z-index: 11;
-        }
-        nav ul li{
-            margin-right: 20px;        
-        }
-        nav ul li a{
-            color:#212121;
-            text-decoration: none;
-        }
-        nav ul li.SeccionActiva{
-            text-decoration: underline;  
-        }
-        header{
-            display: flex;
-            justify-content: center;
-            margin: 1em;
-        }
-        header img{
-            width: 50vw;
-            height: 25vw;
-            border-radius: 2em;
-        }
-        @media (max-width:800px) {
-            nav ul{
-                flex-direction: column;
-                font-size: 4vw;
-                text-align: center;
-            }
-            header img{
-                width: 75vw !important;
-                border-radius: 1em !important;
-            }
-        }
-        header{
-            display: flex;
-            justify-content: center;
-            margin: 1em;
-        }
-
-        /*aca tengo que arreglar los estilos para que el navbar no se colapse con el contenido de la web*/
-        html{
-          scroll-behavior: smooth;
-        }
-        section[id]{
-          scroll-margin-top:10vh;
-        }
-  </style>
+    <link rel="stylesheet" href="../Styles/Fuentes_Personalizadas.css">
+    <script src="https://kit.fontawesome.com/bfffee98c7.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <!-- Home -->
-  <div class="MenuSuperiorHome">
-  <nav>
+  <!--MENU SUPERIOR HOME-->
+  <nav class="MenuSuperiorHome">
     <ul>
-        <li style="flex-grow: 1; text-decoration: none !important;">
+        <li id="navbarTitulo">
             Nuestra señora de la Paz
         </li>
         <li class="SeccionActiva">
-            <a href="#">Grupo</a>    
+            <a href="#Grupo">Grupo</a>    
         </li>
         <li>
-            <a href="#TimeLine">Unidades</a>
+            <a href="#TimeLineGrupo">Unidades</a>
         </li>
         <li>
-            <a href="#">Calendario</a>
+            <a href="#Formularios">Formularios</a>
         </li>
         <li>
             <a href="#">Contacto</a>
         </li>
     </ul>
-</nav>
-</div>
+  </nav>
 
-<!--Activa Clases en el Menu Superior-->
-<script src="../javascripts/activaClasesMenuLateral.js"></script>
-<header>
-    <img src="../Images/Carousel/IglesiaSF1.webp" >
-</header>
-  <!-- //Home -->
-  <!-- Vertical Timeline -->
-  <section id="TimeLine" style="border:3px solid white;">
+  <!--CARRUSEL DE IMAGENES DEL GRUPO-->
+  <header>
+      <section id="Grupo">
+        <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active " data-bs-interval="5000">
+                <img src="../Images/Carousel/Grupo_vieja.jpg" class="d-block">
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <img src="../Images/Carousel/IglesiaSF1.webp" class="d-block">
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <img src="../Images/Carousel/Juego.jpg" class="d-block">
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <img src="../Images/Carousel/Puente.jfif" class="d-block">
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <img src="../Images/Carousel/Salida.jpg" class="d-block">
+              </div>
+            </div>
+        </div>
+
+    </section>
+  </header>
+
+  <!--VERTICAL TIMELINE-->
+  <section id="TimeLineGrupo">
+    <div id="TimeLine">
     <div class="TimeLineStart">Start</div>
     <div class="CenterLine"></div>
     <div class="TimeLine-content">
@@ -390,8 +157,67 @@
       <!-- Article Rover -->
     </div>
     <div class="TimeLineEnd">End</div>
+  </div>
   </section>
+
+  <!--FORMULARIOS-->
+  <section id="Formularios">
+    <div class="contenedorFormularios">
+      <div class="tarjetaFormulario">
+        <div>
+          <a download="Ficha medica" href="../Downloads/Formulario-Ficha-Medica.pdf">Ficha Medica</a>
+        </div>
+        <div>
+          <i class="fa-regular fa-file-pdf"></i>
+        </div>
+        
+      </div>
+      <div class="tarjetaFormulario">
+        <a download="Historia Clinica" href="../Downloads/Formulario-Historia-Clinica.pdf">Historia Clinica</a>
+        <i class="fa-regular fa-file-pdf"></i>
+      </div>
+      <div class="tarjetaFormulario">
+        <a download="Autorizacion uso de imagen" href="../Downloads/Autorizacion-Uso-de-Imagen.pdf">Autorizacion de uso de Imagen &nbsp;(menores&nbsp;de&nbsp;18&nbsp;años)</a>
+        <i class="fa-regular fa-file-pdf"></i>
+      </div>
+      <div class="tarjetaFormulario"><a download="Autorizacion para campamentos" href="../Downloads/Autorizacion-Salidas-Acantonamientos-Campamentos.pdf">Autorizacion para Campamentos&nbsp;(Menores&nbsp;de&nbsp;18&nbsp;años)</a>
+        <i class="fa-regular fa-file-pdf"></i>
+      </div>
+      <div class="tarjetaFormulario">
+        <a download="Autorizacion de ingreso" href="../Downloads/Autorizacion-de-Ingreso-Menores-de-18-Anos.pdf">Autorizaicon de ingreso &nbsp;(Menores&nbsp;de&nbsp;18&nbsp;años)</a>
+        <i class="fa-regular fa-file-pdf"></i>
+      </div>
+      <div class="tarjetaFormulario">
+        <a download="Declaracion jurada" href="../Downloads/declaracion-jurada">Declaracion Jurada &nbsp;(Mayores&nbsp;de&nbsp;18&nbsp;años)</a>
+        <i class="fa-regular fa-file-pdf"></i>
+      </div>
+    </div>
+  </section>
+
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <div>10</div>
 </body>
+
+<!--Activa Clases en el Menu Superior-->
+<script src="../javascripts/activaClasesMenuLateral.js"></script>
 </html>
 
 

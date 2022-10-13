@@ -20,7 +20,7 @@
 
 //AÑADE LA CLASE "SeccionActiva" AL MENU SUPERIOR DEL HOME.HTML
 
-    const list1 = document.querySelectorAll("div.MenuSuperiorHome ul li");
+    const list1 = document.querySelectorAll(".MenuSuperiorHome ul li");
     function activarSeccion(){
         //Si bien no se considera al primer elemnto en la escucha de eventos, se verifica que no tenga la clase SeccionActiva
         if (list1[0].className === "SeccionActiva"){
