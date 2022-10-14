@@ -126,13 +126,78 @@
 	    backdrop-filter: blur(10px);
         box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
     }
-    .tarjetaFormulario a{
+    .tarjetaFormulario  p{
         color: #fdefde;
+        font-size: calc(0.5vw + 1vh);
         text-decoration: none;
         grid-area: nombreForm;
     }
-    .tarjetaFormulario i{
+    .tarjetaFormulario a i{
         color: #ff6961;
-        scale: 5;
+        font-size: calc(4vw + 1vh);
         grid-area: iconForm;
     }
+    /*CONTACTO*/
+
+    .redesSociales{
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-areas:    "fb ig tw gm";
+        justify-items: center;
+        align-items: center;
+        margin:auto;
+
+        min-width: calc(20vw + 1vh);
+        max-width: 80%;
+        min-height: calc(10vw + 1vh);
+        max-height: 100%;
+        
+        border-radius: 100px;
+        background: rgba(255, 255, 255, .4);
+	    -webkit-backdrop-filter: blur(10px);
+	    backdrop-filter: blur(10px);
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    }
+
+    .redesSociales i{
+        color: #2b343b;
+        font-size: calc(4vw + 1vh);
+        transition: .25s;
+    }
+    #fb:hover{
+        transition: .25s;
+        color:#3b5998;
+    }
+    #ig:hover{
+        transition: .25s;
+        background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+        background-clip: text;
+        color: transparent;
+    }
+    #tw:hover{
+        transition: .25s;
+        color:#00acee ;
+    }
+    /*icono gmail color*/
+    .redesSociales img{
+        transition: .25s;
+        margin-bottom: 2em;
+        height: calc(4vw + 1vh);
+        width: auto;
+        grid-area: gm;
+      }
+      .redesSociales img:hover{
+        transition: .25s;
+        opacity: 0%; 
+    }
+    
+    .imgHover{
+        opacity: 100%;
+        grid-area: gm;
+    }
+    .imgHover:hover{
+        opacity: 100%;
+        transition: .25s;
+    }
+    /*icono gmail color*/
+    
