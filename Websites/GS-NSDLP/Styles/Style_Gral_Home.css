@@ -7,12 +7,7 @@
 
     /*MENU SUPERIOR*/
     .MenuSuperiorHome{
-      display:block;
-    }
-    #navbarTitulo{
-        flex-grow: 1;
-    }
-    nav{
+        display:block;
         width: 90%; 
         background: #fdefde;
         padding:20px 0 20px 20px;
@@ -21,9 +16,11 @@
         top:0;
         left:5%;
         box-shadow:0px 4px 3px rgba(0,0,0,.5);
-
-        --heigth-navbar-home:100%;
     }
+    #navbarTitulo{
+        flex-grow: 1;
+    }
+
     nav ul{
         display:flex;
         list-style: none;
@@ -48,7 +45,7 @@
     }
 
     /*CARRUSEL IMAGENES GRUPO*/
-    #Grupo{
+    #Grupo,#Carrusel{
         padding-top:6em;
     }
     header{
@@ -62,6 +59,12 @@
     #carouselExampleCaptions{
         width: 75vw;
 
+    }
+    .infoGrupo{
+        width: 70vw;
+        color: #fdefde;
+        text-align: justify;
+        margin: auto;
     }
     @media (max-width:800px) {
         nav ul{
@@ -90,7 +93,7 @@
     }
     .contenedorFormularios{
         width: 60vw;
-        height: 20vw;
+        height: 30vw;
 
         margin:auto;
         text-align: stretch;
@@ -137,8 +140,38 @@
         font-size: calc(4vw + 1vh);
         grid-area: iconForm;
     }
+    @media all and (min-width:300px) and (max-width:1024px){
+        .contenedorFormularios{
+            width: 60vw;
+            height: 250vw;
+
+            grid-template-areas:    "card-1"
+                                    "card-2"
+                                    "card-3"
+                                    "card-3"
+                                    "card-4"
+                                    "card-5"
+                                    "card-6";
+            grid-gap: .5em;
+        }
+        .tarjetaFormulario  p{
+            font-size: calc(1vw + 1vh);
+        }
+        .tarjetaFormulario a i{
+            font-size: calc(8vh + 0.5vw);
+        }
+    }
     /*CONTACTO*/
 
+    #Contacto{
+        padding-top:6em;
+    }
+    .tituloSeccion{
+        font-family: 'Bebas Neue', cursive!important;
+        color:#fdefde;
+        text-align: center;
+        font-size: calc(0.5vw + 5vh);
+    }
     .redesSociales{
         display:grid;
         grid-template-columns: repeat(4,1fr);
@@ -171,6 +204,9 @@
     #ig:hover{
         transition: .25s;
         background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -o-background-clip: text;
         background-clip: text;
         color: transparent;
     }
@@ -181,7 +217,7 @@
     /*icono gmail color*/
     .redesSociales img{
         transition: .25s;
-        margin-bottom: 2em;
+        margin-bottom: 15%;
         height: calc(4vw + 1vh);
         width: auto;
         grid-area: gm;
@@ -200,4 +236,56 @@
         transition: .25s;
     }
     /*icono gmail color*/
+
+    /*footer*/
+    footer{
+        padding-top: 6em;
+        padding-bottom: 1em;
+    }
+    .footerHome{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "info      extra"
+                             "dev       dev";
+        width: 90%; 
+        background: #212121;
+        padding:20px;
+        margin: auto;
+        border-radius: 20px;
+        box-shadow:0px 4px 3px rgba(0,0,0,.5);
+    }
+    .footerHome .infoGrupoFooter li{
+        color:#fdefde;
+        text-decoration: none;
+    }
+    .footerHome .infoGrupoFooter{
+        display: block;
+        list-style: none;
+        font-size: large;
+        height: 100%;
+        margin: 0;
+        font-family: 'Bebas Neue', cursive!important;
+    }
+    .footerHome .extraFooter{
+        display:flex;
+        align-items: center;
+        list-style: none;
+        justify-content:flex-end;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    .footerHome .extraFooter li img{
+        height: 2em;
+    }
+
+    .footerHome .dev{
+        align-self:flex-end;
+        justify-self: center;
+        color: #fdefde;
+        grid-area: dev;
+        
+    }
+    
     
