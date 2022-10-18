@@ -289,18 +289,21 @@
     <h1 class="tituloSeccion">Contactanos!</h1>
     <div class="redesSociales">
 
-          <i id="fb" class="fa-brands fa-facebook"></i>
-
-          <i id="ig" class="fa-brands fa-instagram"></i>
-
-          <i id="tw" class="fa-brands fa-twitter"></i>
-
-          <img class="imgHover" src="../Images/gmail.svg">
-          <img src="../Images/gmailNegro.svg">
+          <a href="https://www.facebook.com/GrupoScoutLaPazLlavallol/" target="_blank" rel="noopener noreferrer"><i id="fb" class="fa-brands fa-facebook"></i></a>
           
+          <a href="https://www.instagram.com/gruposcout_lapaz/?hl=es" target="_blank" rel="noopener noreferrer"><i id="ig" class="fa-brands fa-instagram"></i></a>
 
+          <a href="https://twitter.com/gruposcoutlapaz?lang=es" target="_blank" rel="noopener noreferrer"><i id="tw" class="fa-brands fa-twitter"></i></a>
+          
+          <img class="imgHover" src="../Images/gmail.svg" onclick="copiarMail()">
+          <img src="../Images/gmailNegro.svg" onclick="copiarMail()">
+          <button onclick="copiarMail()"></button>
 
-</svg>
+          <script>
+            function copiarMail(){
+              let mailgrupo = 'gsnsdlp@gmail.com';
+              navigator.clipboard.writeText(mailgrupo);  }
+          </script>
 
     </div>
   </section>
