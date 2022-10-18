@@ -30,7 +30,11 @@
         color: #212121;
     }
     nav ul li a{
-        color: #212121 !important;
+        color: #212121!important;
+        text-decoration: none;
+    }
+    .dropdownLink{
+        color: #fdefde!important;
         text-decoration: none;
     }
     nav ul li.SeccionActiva{
