@@ -6,17 +6,6 @@
     }
 
     /*MENU SUPERIOR*/
-    /*.MenuSuperiorHome{
-        display:block;
-        width: 90%; 
-        background: #fdefde;
-        padding:20px 0 20px 20px;
-        position: fixed;
-        z-index: 10;
-        top:0;
-        left:5%;
-        box-shadow:0px 4px 3px rgba(0,0,0,.5);
-    }*/
     .MenuSuperiorHome{
         display:block;
         width: 90%; 
@@ -28,25 +17,17 @@
         top:0;
         box-shadow:0px 4px 3px rgba(0,0,0,.5);
     }
-    /*#navbarTitulo{
-        flex-grow: 1;
-    }*/
 
     nav ul, nav div p{
         display:flex;
         list-style: none;
         justify-content:flex-end;
         flex-wrap: wrap;
-        height: 100%;
         margin: 0;
         padding: 0;
         font-family: 'Bebas Neue', cursive;
         font-size: calc(1vw + 2vh);
         color: #212121;
-        z-index: 11;
-    }
-    nav ul li{
-        margin-right: 20px;        
     }
     nav ul li a{
         color: #212121 !important;
@@ -298,9 +279,12 @@
     .footerHome .dev{
         align-self:flex-end;
         justify-self: center;
-        color: #fdefde;
         grid-area: dev;
-        
+        color: #fdefde;  
+    }
+    .footerHome .dev p{
+        font-size: medium;
+        color: #fdefde;  
     }
     
     
