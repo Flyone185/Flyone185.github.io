@@ -2,7 +2,7 @@
       #TimeLine {
         position: relative;
         max-width: 920px;
-        width: 100%;
+        width: 90%;
         margin:auto;
       }
       #TimeLine .TimeLineStart,
