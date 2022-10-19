@@ -221,21 +221,28 @@
         height: calc(4vw + 1vh);
         width: auto;
         grid-area: gm;
+
       }
       .redesSociales img:hover{
         transition: .25s;
-        opacity: 0%; 
+        opacity: 0%;
+
+    }
+    .linkGmail{
+        margin-bottom: 15%;
+        height: calc(4vw + 1vh);
+        width: auto;
+        grid-area: gm;
+    }
+    .linkGmail:hover{
+        transition: .25s;
+        opacity: 0%;
     }
     
     .imgHover{
         opacity: 100%;
         grid-area: gm;
     }
-    .imgHover:hover{
-        opacity: 100%;
-        transition: .25s;
-    }
-    /*icono gmail color*/
 
     /*footer*/
     footer{

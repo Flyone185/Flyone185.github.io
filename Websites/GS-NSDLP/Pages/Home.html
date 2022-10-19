@@ -295,17 +295,48 @@
 
           <a href="https://twitter.com/gruposcoutlapaz?lang=es" target="_blank" rel="noopener noreferrer"><i id="tw" class="fa-brands fa-twitter"></i></a>
           
-          <img class="imgHover" src="../Images/gmail.svg" onclick="copiarMail()">
-          <img src="../Images/gmailNegro.svg" onclick="copiarMail()">
-          <button onclick="copiarMail()"></button>
-
-          <script>
-            function copiarMail(){
-              let mailgrupo = 'gsnsdlp@gmail.com';
-              navigator.clipboard.writeText(mailgrupo);  }
-          </script>
+          
+          <a class="linkGmail" href="mailto:gsnsdlp@gmail.com?subjet=Me%20interesa%20recibir%20más%20información">
+            <img class="imgHover" src="../Images/gmail.svg" onclick="muestraMail()">
+          </a>
+          <a class="linkGmail" href="mailto:gsnsdlp@gmail.com?subjet=Me%20interesa%20recibir%20más%20información">
+            <img src="../Images/gmailNegro.svg" onclick="muestraMail()">
+          </a>
+                
 
     </div>
+    <!-- 
+      ESTE CODIGO TIENE UNA CARD BOOTSTRAP QUE MUESTRA DOS OPCIONES PARA COPIAR EL MAIL O ENVIAR MAIL
+      <div id="grupoMail" class="card text-white bg-dark mb-3" style="max-width: 18rem;display: none; position: relative;top:50%;left:50%;transform: translate(-50%,-100%);">
+      <div class="card-header text-center">gsnsdlp@gmail.com</div>
+      <div class="card-body text-secondary">
+        <button class="btn col-12 my-4 btn-sm btn-outline-light">
+          <a href="mailto:gsnsdlp@gmail.com?subjet=Me%20interesa%20recibir%20más%20información"><h5 class="card-title">Enviar Mail</h5></a>
+        </button>
+        <button class="btn col-12 my-4 btn-outline-light"onclick="copiarMail()">
+          <h5 class="card-title">Copiar mail al portapapeles</h5>
+        </button>
+        <label class="text-success" id="aviso">&nbsp;</label>
+      </div>
+    </div>
+    <script>
+            function muestraMail(){
+              document.getElementById('grupoMail').style.display = 'flex';
+            }
+            function copiarMail(){
+              let mailgrupo = 'gsnsdlp@gmail.com';
+              navigator.clipboard.writeText(mailgrupo);
+              document.getElementById('aviso').innerHTML = 'Mail copiado al portapapeles';
+              document.getElementById('aviso').style.opacity = "0";
+              document.getElementById('aviso').style.transition = "2s";              
+              setTimeout(()=>{
+                document.getElementById('aviso').style.transition = "0s";
+                document.getElementById('aviso').style.opacity = "1";
+                document.getElementById('aviso').innerHTML = '&nbsp;';
+              },1000)
+              }
+          </script>
+    -->
   </section>
   <footer>
     <nav class="footerHome">
