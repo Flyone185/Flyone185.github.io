@@ -116,3 +116,9 @@ color: #fdefde;
     white-space: nowrap;
 }
 
+/*respondividad*/
+@media(max-width:1100px){ 
+    .MenuLateral{
+        display: none;
+    }
+    }
