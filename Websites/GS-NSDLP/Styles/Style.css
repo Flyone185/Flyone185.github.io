@@ -3,7 +3,6 @@
     padding: 0!important;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-
 }
 
 body{
@@ -11,7 +10,7 @@ body{
     justify-content:left;
     align-items: center;
     min-height: 100vh;
-    background: #2b343b;
+    background: #2b343b!important;
 
 }
 
@@ -29,6 +28,10 @@ body{
 .MenuInferior{
     display: none!important;
 }
+.MenuInferior .ListaMenuInferior li.Active{
+    text-decoration: underline;   
+    color:#fdefde;
+}
 @media(min-width:1000px){ /*Cuando el tamaño de la pantalla es menor a 1100px, el hover no se realiza haciendo que todo el contenido se desplaze mas de lo necesario*/
 .MenuLateral:hover{
     width: 300px;
@@ -40,7 +43,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    padding-top: 40px;
+    padding-top: 40px!important;
     align-items: center;
 }
 

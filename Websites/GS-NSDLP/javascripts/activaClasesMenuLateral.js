@@ -1,7 +1,7 @@
 //AÑADE LA CLASE "Active" A LA OPCION SELECCIONADA DEL MENU LATERAL DEL INDEX.HTML
     
     const list = document.querySelectorAll("li.MenuOpcionLateral");
-    function activarClase(){
+    function activarClaseLateral(){
         list.forEach(
             function(item){
                 item.classList.remove("Active")
@@ -12,12 +12,28 @@
 
     list.forEach(
         function(item){
-            item.addEventListener("click", activarClase);
+            item.addEventListener("click", activarClaseLateral);
         }
     );
 
 /*______________________________________________________________________________*/
+//AÑADE LA CLASE ACTIVE A LA OPCION SELECCIONADA DEL MENU INFERIOR
+const list2 = document.querySelectorAll("li.MenuOpcionInferior");
+    function activarClaseInferior(){
+        list2.forEach(
+            function(item){
+                item.classList.remove("Active")
+            }
+        );
+        this.classList.add("Active");
+    }
 
+    list2.forEach(
+        function(item){
+            item.addEventListener("click", activarClaseInferior);
+        }
+    );
+/*______________________________________________________________________________*/
 //AÑADE LA CLASE "SeccionActiva" AL MENU SUPERIOR DEL HOME.HTML
 
     const list1 = document.querySelectorAll(".MenuSuperiorHome ul li");

@@ -85,7 +85,7 @@
         style="position:fixed; bottom:0;height: 2em;">
         <button class="navbar-toggler bg-dark rounded-circle border-dark" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
-            style="width: 50px; height:50px;transform:translate(0%,-50%)">
+            style="width: 50px; height:50px;transform:translate(0%,-50%); box-shadow: none;">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#fdefde" class="bi bi-plus-lg"
                 viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
@@ -98,34 +98,34 @@
                 <h5 class="offcanvas-title text-light fs-1" id="offcanvasDarkNavbarLabel">Sitios</h5>
                 <button type="button" class="btn btn-close btn-close-white p-4" data-bs-dismiss="offcanvas"
                     aria-label="Close"></button>
-                </div>
+            </div>
             <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ms-3 fs-4">
-                    <li class="nav-item py-2">
-                        <a class="nav-link active" aria-current="page" href="#">LogIn</a>
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ms-3 fs-4 ListaMenuInferior">
+                    <li class="nav-item py-2 MenuOpcionInferior">
+                        <a class="nav-link" aria-current="page" href="../Pages/LogIn.html" target="Contenido">LogIn</a>
                     </li>
-                    <li class="nav-item  py-2">
-                        <a class="nav-link" href="#">Home</a>
+                    <li class="nav-item  py-2 MenuOpcionInferior Active" data-bs-dismiss="offcanvas">
+                        <a class="nav-link" href="../Pages/Home.html" target="Contenido">Home</a>
                     </li>
-                    <li class="nav-item  py-2">
-                        <a class="nav-link" href="#">Tienda</a>
+                    <li class="nav-item  py-2 MenuOpcionInferior" data-bs-dismiss="offcanvas">
+                        <a class="nav-link" href="../Pages/Store.html" target="Contenido">Tienda</a>
                     </li>
-                    <li class="nav-item  py-2">
-                        <a class="nav-link" href="#">Beneficiarios</a>
+                    <li class="nav-item  py-2 MenuOpcionInferior" data-bs-dismiss="offcanvas">
+                        <a class="nav-link" href="../Pages/Beneficiarios.html" target="Contenido">Beneficiarios</a>
                     </li>
-                    <li class="nav-item  py-2">
-                        <a class="nav-link" href="#">Educadores</a>
+                    <li class="nav-item  py-2 MenuOpcionInferior" data-bs-dismiss="offcanvas">
+                        <a class="nav-link" href="../Pages/Educadores.html" target="Contenido">Educadores</a>
                     </li>
-                    <li class="nav-item  py-2">
-                        <a class="nav-link" href="#">Configuracion</a>
+                    <li class="nav-item  py-2 MenuOpcionInferior" data-bs-dismiss="offcanvas">
+                        <a class="nav-link" href="../Pages/Configuracion.html" target="Contenido">Configuracion</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!--Activa Clases en el menu lateral-->
     <iframe name="Contenido" src="../Pages/Home.html" style="height:100%; width:100%;border:none;"></iframe>
 </body>
+<!--Activa Clases en el menu lateral-->
 <script src="../javascripts/activaClasesMenuLateral.js"></script>
 
 </html>
