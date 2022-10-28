@@ -1,0 +1,23 @@
+    /*ESTILOS GENERALES LOGIN*/
+    body {
+        background: #2b343b!important;
+        font-family: "Roboto", sans-serif;
+        display: grid;
+        grid-template-rows: 1fr 7fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:    "header-form"
+                                "login-form";
+        gap:5em;
+        justify-items: center;
+        align-items: center;
+        
+    }
+    .card{
+        display: flex;
+        padding: 5px;;
+
+        background: rgba(255, 255, 255, .4)!important;
+	    -webkit-backdrop-filter: blur(10px)!important;
+	    backdrop-filter: blur(10px)!important;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    }
