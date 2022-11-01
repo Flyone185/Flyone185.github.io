@@ -12,11 +12,11 @@
         align-items: center;
         
     }
-    .card{
+    .cards{
         display: flex;
-        padding: 5px;;
+        padding: 5px;
 
-        background: rgba(255, 255, 255, .4)!important;
+        background: rgba(98, 37, 153)!important;
 	    -webkit-backdrop-filter: blur(10px)!important;
 	    backdrop-filter: blur(10px)!important;
         box-shadow: 2px 2px 5px rgba(0,0,0,0.6);

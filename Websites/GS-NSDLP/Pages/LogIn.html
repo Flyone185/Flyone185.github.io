@@ -24,20 +24,76 @@
         <h1>LOGIN - ACCESO </h1>
     </header>
     <section>
-        <div class="card">
-            <form action="">
-                <legend>CAMARATI!</legend>
-                <input type="text" placeholder="usuario">
-                <select name="" id="">
-                    <option value="">Manda de lobatos</option>
-                    <option value="">Unidad Scout</option>
-                    <option value="">Comunidad Caminantes</option>
-                    <option value="">Rovers</option>
-                </select>
-                <input type="text" placeholder="Clave">
-                <button>Siempre Listo!</button>
+            <form class="cards form-floating row col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-10 offset-1 gap-4 container-fluid justify-content-center" action="">
+                    <legend class="text-center text-light col-12 fs-2">CAMARATI!</legend>
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="usuario" placeholder=".">
+                        <label class="ms-2" for="usuario">Usuario</label>
+                    </div>
+
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="clave" placeholder=".">
+                        <label class="ms-2" for="clave">Clave</label>
+                    </div>
+
+                    <div class="form-floating">
+                        <select class="col-12 form-select"  name="" id="opcionRama">
+                            <option value="1">Manada de lobatos</option>
+                            <option value="2">Unidad Scout</option>
+                            <option value="3">Comunidad Caminantes</option>
+                            <option value="4">Rovers</option>
+                        </select>
+                        <label class="ms-2" for="opcionRama">Selecciona tu rama</label>
+                    </div>
+                    
+                    
+                    <button id="logIn" onclick="logueaUsuario()" class=" disabled col-6 btn btn-lg btn-dark mb-4 text-light">ATENTI!</button>
             </form>
-        </div>
+            
+            <script>
+                const ramaselec = document.getElementById('opcionRama');
+                const btnLogin = document.getElementById('logIn')
+                document.addEventListener('change', ()=>{
+                    btnLogin.classList.remove('disabled');
+                switch (ramaselec.selectedIndex) {
+                    case 0:
+                        btnLogin.classList.replace('btn-success', 'btn-warning');
+                        btnLogin.classList.replace('btn-info', 'btn-warning');
+                        btnLogin.classList.replace('btn-danger', 'btn-warning');
+                        btnLogin.classList.replace('btn-dark', 'btn-warning');
+                        btnLogin.innerHTML = 'Siempre Mejor!'
+                        break;
+
+                    case 1:
+                        btnLogin.classList.replace('btn-warning', 'btn-success');
+                        btnLogin.classList.replace('btn-ingo', 'btn-success');
+                        btnLogin.classList.replace('btn-danger', 'btn-success');
+                        btnLogin.classList.replace('btn-dark', 'btn-success');
+                        btnLogin.innerHTML = 'Siempre Listo!'
+                        break;
+                    case 2:
+                        btnLogin.classList.replace('btn-warning', 'btn-info');
+                        btnLogin.classList.replace('btn-success', 'btn-info');
+                        btnLogin.classList.replace('btn-danger', 'btn-info');
+                        btnLogin.classList.replace('btn-dark', 'btn-info');
+                        btnLogin.innerHTML = 'Siempre Listo!'
+                        break;
+                    case 3:
+                        btnLogin.classList.replace('btn-warning', 'btn-danger');
+                        btnLogin.classList.replace('btn-success', 'btn-danger');
+                        btnLogin.classList.replace('btn-info', 'btn-danger');
+                        btnLogin.classList.replace('btn-dark', 'btn-danger');
+                        btnLogin.innerHTML = 'Servir!'
+                        break;
+                    case defaul:
+                    btnLogin.classList.replace('btn-warning', 'btn-dark');
+                        btnLogin.classList.replace('btn-success', 'btn-dark');
+                        btnLogin.classList.replace('btn-info', 'btn-dark');
+                        btnLogin.classList.replace('btn-danger', 'btn-dark');
+                        btnLogin.innerHTML = 'ATENTI!'
+                }
+            })
+            </script>
     </section>
 </body>
 
