@@ -2,6 +2,7 @@ const select = document.getElementById("categoria");
 const lblError = document.getElementById('error');
 const lblTotalAPagar = document.getElementById('cantTotal');
 const $elementos = document.querySelectorAll(".previeneEnvio");
+const btnEnviaForm = document.getElementById("btnForm");
 
 //funcion que valida que todos los campos esten completos sino da un aviso de error para verificar datos
 function validaCampos() {
@@ -29,10 +30,12 @@ function validaCampos() {
 
     });
     if (campovacio) {
-        lblError.innerHTML = "VERIFICAR TODOS LOS DATOS!"
+        btnEnviaForm.type = 'submit';
+        lblError.innerHTML = "VERIFICAR TODOS LOS DATOS!";
         lblTotalAPagar.innerHTML = "";
     }
     else {
+        btnEnviaForm.type = 'button';
         lblError.innerHTML = "";
         calculaTotal();
     }
@@ -70,8 +73,9 @@ function calculaTotal() {
             //Opcion Estudiante break;
             document.getElementById('error').innerHTML = "ERROR GENERAL, CONTACTARSE CON EL PROGRAMADOR"
     }
-} 
     lblTotalAPagar.innerHTML = totalAPagar;
+} 
+    
 
 
 //________________________________________________________________________________________________________________________________
